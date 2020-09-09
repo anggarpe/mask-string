@@ -10,7 +10,7 @@ public class Mask {
 
     public static String mask(String original) {
         String[] word = original.split(" ");
-        String[] filter =new String[0];
+        String[] filter;
         StringBuilder res= new StringBuilder();
 
         for (int i = 0; i < word.length ; i++) {
