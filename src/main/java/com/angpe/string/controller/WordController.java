@@ -7,22 +7,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("word")
+@RequestMapping("mask")
 public class WordController {
 
-    @Autowired
-    private WordService ws;
-
-    @GetMapping("/{word}")
-    public String Mask(@PathVariable String word){
-        return ws.mask(word);
-    }
 
     @GetMapping("")
-    public String MaskTwo(@RequestParam(value = "word",
-            defaultValue = "Word", required = true)
-                                      String word, Model model){
-        model.addAttribute("word", word);
-        return "Home.jsp";
+    public String Mask(@RequestParam(name="word", defaultValue = "word") String word){
+        return WordService.mask(word);
     }
+
 }

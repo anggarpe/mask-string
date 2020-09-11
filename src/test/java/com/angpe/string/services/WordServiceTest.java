@@ -1,27 +1,13 @@
-package com.angpe.string;
+package com.angpe.string.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.HashMap;
 
-import com.angpe.string.services.WordService;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.mock.mockito.MockBean;
 
 
-class MaskTest {
-    private final PrintStream standardOut = System.out;
-    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
-
-    @BeforeEach
-    public void setUp() {
-        System.setOut(new PrintStream(outputStreamCaptor));
-    }
-
+class WordServiceTest {
     @Test
     void testGivenString_ThenReturnStringWithMask() {
         HashMap<String, String> tests = new HashMap<>();
