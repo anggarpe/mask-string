@@ -23,9 +23,6 @@ class WordControllerTest {
     @Autowired
     private MockMvc mvc;
 
-//    @MockBean
-//    WordService ws;
-
     @Test
     void mask() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/mask?word=kucing"))
