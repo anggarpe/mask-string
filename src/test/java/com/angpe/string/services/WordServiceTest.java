@@ -25,15 +25,5 @@ class WordServiceTest {
 
         tests.forEach((original, masked) -> assertEquals(masked, WordService.mask(original)));
     }
-
-    @Test
-    void testReturnWithSpace_WhenLastElementNotEquals(){
-        HashMap<String, String> tests = new HashMap<>();
-
-        tests.put("pig", "cow");
-        tests.put("bird", "man");
-
-        tests.forEach((one, two) -> assertEquals(" ", WordService.space(one, two)));
-    }
 }
 
